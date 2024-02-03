@@ -1,5 +1,11 @@
+
+include("./Hello.jl")
+using .Hello
+print(foo())
+
 using LinearAlgebra
 using BenchmarkTools
+
 
 A=rand(10)
 
