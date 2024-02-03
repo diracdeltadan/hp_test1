@@ -1,5 +1,11 @@
+
+include("./Hello.jl")
+using .Hello
+print(foo())
+
 using LinearAlgebra
 using BenchmarkTools
+
 
 A=rand(10)
 
@@ -7,7 +13,7 @@ A=rand(10)
 
 using CUDA
 
-CA = CUDA.rand(Float32,2_000_000);
+CA = CUDA.rand(Float32,2_000);
 
 sca = sum(CA);
 
